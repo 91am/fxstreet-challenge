@@ -1,9 +1,8 @@
 .card {
-  background-color: var(--tertiary-color);
+  background-color: #FFFFFF;
   border-radius: 4px;
   width: 700px;
   height: 600px;
-  font-family: "Roboto", sans-serif;
 
   .category {
     background-color: var(--neutral-color);
@@ -12,13 +11,28 @@
     justify-content: space-between;
     align-items: center;
     padding: 4px 20px;
-    font-size: 17.6px;
-    font-weight: 700;
     line-height: 20px;
+  }
 
-    .sub-category {
-      display: flex;
+  .sub-category {
+    display: flex;
+    align-items: center;
+    font: var(--heading-m-font);
+    gap: 4px;
+
+    .feed {
+        color: var(--secondary-color);
     }
+    .sub-feed{
+        color: var( --tertiary-color);
+    }
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--neutral-color-dark);
   }
 
   .head {
@@ -30,5 +44,41 @@
 
   p {
     padding: 10px 20px;
+  }
+
+  .options {
+    display: flex;
+    padding: 10px 16px;
+    font: var(--body-m-font);
+    gap: 20px;
+
+    button {
+      display: flex;
+      border: none;
+      gap: 8px;
+      align-items: center;
+      background-color: unset;
+      cursor: pointer;
+    }
+
+    .like-btn:hover {
+      path {
+        transition: fill 0.3s ease;
+        fill: var(--error-color);
+      }
+      span {
+        color: var(--error-color);
+      }
+    }
+
+    .save-btn:hover {
+      path {
+        transition: fill 0.3s ease;
+        fill: var(--success-color);
+      }
+      span {
+        color: var(--success-color);
+      }
+    }
   }
 }

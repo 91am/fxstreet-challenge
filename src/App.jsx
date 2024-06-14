@@ -13,7 +13,7 @@ function App() {
       <main className="main">
         <nav className="topbar"></nav>
         <div className="feed-layout">
-          <section className="feed">
+          <section className="news">
             <div className="filters"></div>
             <div className="timeline">
           <Card></Card>
