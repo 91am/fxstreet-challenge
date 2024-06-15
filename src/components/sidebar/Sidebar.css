@@ -11,6 +11,30 @@
     margin: 0 auto;
   }
 
+  .logo-mobile {
+    width: 137px;
+  }
+
+  .sidebar-mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    .sidebar-mobile-icon-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+
+      .sidebar-mobile-icon {
+        width: 16px;
+        height: 16px;
+        background-color: var(--neutral-color);
+        border-radius: 100%;
+      }
+    }
+  }
+
   .side-nav {
     justify-self: start;
     padding-left: 20px;
