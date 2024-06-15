@@ -1,0 +1,28 @@
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+
+  .logo-desktop {
+    width: 163px;
+    padding: 40px 20px;
+    margin: 0 auto;
+  }
+
+  .side-nav {
+    justify-self: start;
+    padding-left: 20px;
+    padding-top: 40px;
+
+    .side-menu {
+      list-style: none;
+      color: var(--neutral-color-light);
+
+      .link-menu {
+        padding: 8px 0;
+      }
+    }
+  }
+}
