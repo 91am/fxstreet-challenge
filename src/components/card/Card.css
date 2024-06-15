@@ -5,7 +5,7 @@
   height: 600px;
 
   .category {
-    background-color: var(--neutral-color);
+    background-color: #f5f5f8;
     height: 44px;
     display: flex;
     justify-content: space-between;

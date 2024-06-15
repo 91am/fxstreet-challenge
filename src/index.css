@@ -3,6 +3,7 @@
   --secondary-color: #304c70;
   --tertiary-color: #7598C4;
   --accent-color: #e4871b;
+  --neutral-color-light: #FFFFFF;
   --neutral-color: #ECECF1;
   --neutral-color-dark:#49494F;
   --success-color:#338473;
@@ -13,7 +14,7 @@
   --body-l-font: 300 19.2px 'Roboto', sans-serif ;
   --body-m-font: 400 18px 'Roboto', sans-serif ;
   --body-s-font: 400 14.72px 'Roboto', sans-serif ;
-  --body-s-font: 400 12.8px 'Roboto', sans-serif ;
+  --body-xs-font: 400 12.8px 'Roboto', sans-serif ;
 }
 
 body{
@@ -46,30 +47,32 @@ body{
 
   .sidebar {
     grid-area: sidebar;
-    background-color: #ffebcc; /* light yellow */
+    background-color: var(--primary-color); 
     padding: 10px;
   }
 
   .topbar {
     grid-area: topbar;
-    background-color: #cce5ff; /* light blue */
+    background-color: var(--neutral-color-light);
     padding: 10px;
   }
 
   .filter {
     grid-area: filter;
-    background-color: #d5f5e3; /* light green */
+    background-color: var(--neutral-color);
     padding: 10px;
   }
 
   .main {
     grid-area: main;
-    background-color: #f9eaf7; /* light pink */
+    background-color: purple;
     height: 100%;
     overflow-y: scroll;
 
     .content {
       height: 100vh;
+      align-items: center;
+      padding: 8px 20px;
     }
   }
 

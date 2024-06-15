@@ -1,4 +1,5 @@
 import Card from "./components/card/Card"
+import WidgetCard from "./components/widget-card/WidgetCard";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Card></Card>
         </div>
       </main>
-      <div class="widget">widgets</div>
+      <div class="widget"><WidgetCard></WidgetCard></div>
     </div>
   );
 }
