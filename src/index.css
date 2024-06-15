@@ -1,24 +1,24 @@
 :root {
   --primary-color: #242d38;
   --secondary-color: #304c70;
-  --tertiary-color: #7598C4;
+  --tertiary-color: #7598c4;
   --accent-color: #e4871b;
-  --neutral-color-light: #FFFFFF;
-  --neutral-color: #ECECF1;
-  --neutral-color-dark:#49494F;
-  --success-color:#338473;
-  --error-color:#D25746; 
-  --heading-l-font: 700 22.4px 'Roboto', sans-serif ;
-  --heading-m-font: 700 17.6px 'Roboto', sans-serif ;
-  --heading-s-font: 700 16px 'Roboto', sans-serif ;
-  --body-l-font: 300 19.2px 'Roboto', sans-serif ;
-  --body-m-font: 400 18px 'Roboto', sans-serif ;
-  --body-s-font: 400 14.72px 'Roboto', sans-serif ;
-  --body-xs-font: 400 12.8px 'Roboto', sans-serif ;
+  --neutral-color-light: #ffffff;
+  --neutral-color: #ececf1;
+  --neutral-color-dark: #8C8D91;
+  --success-color: #338473;
+  --error-color: #d25746;
+  --heading-l-font: 700 22.4px "Roboto", sans-serif;
+  --heading-m-font: 700 17.6px "Roboto", sans-serif;
+  --heading-s-font: 700 16px "Roboto", sans-serif;
+  --body-l-font: 300 19.2px "Roboto", sans-serif;
+  --body-m-font: 400 18px "Roboto", sans-serif;
+  --body-s-font: 400 14.72px "Roboto", sans-serif;
+  --body-xs-font: 400 12.8px "Roboto", sans-serif;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .layout {
@@ -50,9 +50,11 @@ body{
 
   .topbar {
     grid-area: topbar;
-padding: 10px;
-height: 40px;
-    
+    padding: 10px;
+    height: 40px;
+      @media screen and (max-width: 1080px) {
+        display: none;
+      }
   }
 
   .filter {
@@ -63,7 +65,7 @@ height: 40px;
 
   .main {
     grid-area: main;
-    background-color: purple;
+    background-color: var(--neutral-color);
     height: 100%;
     overflow-y: scroll;
 
