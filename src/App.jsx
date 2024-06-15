@@ -4,19 +4,39 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import Filter from "./components/filter/Filter";
 
+import {
+ 
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+import CardList from "./components/card-list/CardList";
+
+const queryClient = new QueryClient();
+
 function App() {
+
   return (
-    <div class="layout">
-      <div class="sidebar"><Sidebar></Sidebar></div>
-      <div class="topbar"><Topbar></Topbar></div>
-      <div class="filter"><Filter></Filter></div>
-      <main class="main">
-        <div class="content">
-          <Card></Card>
+    <QueryClientProvider client={queryClient}>
+      <div class="layout">
+        <div class="sidebar">
+          <Sidebar></Sidebar>
         </div>
-      </main>
-      <div class="widget"><WidgetCard></WidgetCard></div>
-    </div>
+        <div class="topbar">
+          <Topbar></Topbar>
+        </div>
+        <div class="filter">
+          <Filter></Filter>
+        </div>
+        <main class="main">
+          <div class="content">
+            <CardList></CardList>
+          </div>
+        </main>
+        <div class="widget">
+          <WidgetCard></WidgetCard>
+        </div>
+      </div>
+    </QueryClientProvider>
   );
 }
 
