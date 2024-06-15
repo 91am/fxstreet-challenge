@@ -36,7 +36,6 @@ body{
   @media screen and (max-width: 1080px) {
     grid-template-areas:
       "sidebar sidebar sidebar"
-      "topbar topbar topbar"
       "filter filter filter"
       "main main main"
       "widget widget widget";
@@ -51,8 +50,9 @@ body{
 
   .topbar {
     grid-area: topbar;
-    background-color: var(--neutral-color-light);
-    padding: 10px;
+padding: 10px;
+height: 40px;
+    
   }
 
   .filter {
