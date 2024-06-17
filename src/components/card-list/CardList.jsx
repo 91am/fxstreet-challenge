@@ -16,6 +16,7 @@ export default function CardList() {
           companyName={post.author.companyName}
           authorImage={post.author.imageUrl}
           publicationTime={post.publicationTime}
+          content={post.content}
         ></Card>
       ))}
     </div>

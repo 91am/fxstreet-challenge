@@ -1,5 +1,6 @@
 import "./Card.css";
 
+
 function Card({
   title,
   feed,
@@ -8,7 +9,25 @@ function Card({
   companyName,
   authorImage,
   publicationTime,
+  content,
 }) {
+
+
+  const dateStr = publicationTime;
+  const date = new Date(dateStr);
+
+  const options = {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+    timeZone: "UTC",
+  };
+
+  const formatter = new Intl.DateTimeFormat("en-US", options);
+  const formattedDate = formatter.format(date);
+
   return (
     <div className="card">
       <section className="category">
@@ -21,7 +40,7 @@ function Card({
 
         <div className="date">
           <img src="/date-icon.png" alt="" />
-          <span>{publicationTime}</span>
+          <span>{formattedDate}</span>
         </div>
       </section>
 
@@ -36,13 +55,10 @@ function Card({
         </div>
       </section>
 
-      <img src="" alt="" />
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
-      </p>
+      <p
+        className="content-card"
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></p>
 
       <section className="options">
         <button className="like-btn">
