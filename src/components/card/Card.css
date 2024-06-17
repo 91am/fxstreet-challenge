@@ -84,10 +84,11 @@
 
   .options {
     display: flex;
+    align-items: center;
     padding: 12px 16px;
     margin-bottom: 12px;
     font: var(--body-m-font);
-    gap: 20px;
+    gap: 60px;
 
     button {
       display: flex;
