@@ -21,10 +21,10 @@
     gap: 4px;
 
     .feed {
-        color: var(--secondary-color);
+      color: var(--secondary-color);
     }
-    .sub-feed{
-        color: var( --tertiary-color);
+    .sub-feed {
+      color: var(--tertiary-color);
     }
   }
 
@@ -32,14 +32,35 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--neutral-color-dark);
+    color: var(--neutral-color-medium);
   }
 
   .head {
-    height: 116px;
+    height: 100%;
     border-bottom: 2px solid var(--neutral-color);
     display: flex;
-    padding: 10px 20px;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+
+    img {
+      clip-path: circle(50%);
+      width: 60px;
+      height: 60px;
+    }
+
+    .author-company {
+      display: flex;
+      flex-direction: row;
+      font: var(--heading-s-font);
+      color: var(--neutral-color-medium);
+    }
+
+    h2 {
+      font: var(--heading-l-font);
+      color: var(--neutral-color-dark);
+      margin-top: 8px;
+    }
   }
 
   p {

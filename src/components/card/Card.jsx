@@ -1,27 +1,38 @@
 import "./Card.css";
 
-function Card() {
+function Card({
+  title,
+  feed,
+  subFeed,
+  author,
+  companyName,
+  authorImage,
+  publicationTime,
+}) {
   return (
     <div className="card">
       <section className="category">
         <div className="sub-category">
           <img src="/search-icon.png" alt="" />
-          <span className="feed">Analysis</span>
+          <span className="feed">{feed}</span>
           <img src="/arrow-icon.png" alt="" />
-          <span className="sub-feed">Webinar</span>
+          <span className="sub-feed">{subFeed}</span>
         </div>
 
         <div className="date">
           <img src="/date-icon.png" alt="" />
-          <span>hora</span>
+          <span>{publicationTime}</span>
         </div>
       </section>
 
       <section className="head">
-        <img src="" alt="" />
+        <img src={authorImage} alt="Author" />
         <div className="title">
-          <span>FXstreet</span>
-          <h2>Premium webinar</h2>
+          <div className="author-company">
+            <span className="author">{author} |</span>
+            <span className="company-name"> {companyName}</span>
+          </div>
+          <h2>{title}</h2>
         </div>
       </section>
 
