@@ -35,14 +35,14 @@ function Card({
     <div className="card">
       <section className="category">
         <div className="sub-category">
-          <img src="/search-icon.png" alt="" />
+          <img src="/search-icon.svg" alt="" />
           <span className="feed">{feed}</span>
-          <img src="/arrow-icon.png" alt="" />
+          <img src="/arrow-icon.svg" alt="" />
           <span className="sub-feed">{subFeed}</span>
         </div>
 
         <div className="date">
-          <img src="/date-icon.png" alt="" />
+          <img src="/date-icon.svg" alt="" />
           <span>{formattedDate}</span>
         </div>
       </section>
