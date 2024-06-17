@@ -3,8 +3,8 @@
   --secondary-color: #304c70;
   --tertiary-color: #7598c4;
   --accent-color: #e4871b;
-  --neutral-color-light: #ffffff;
   --neutral-color: #ececf1;
+  --neutral-color-light: #ffffff;
   --neutral-color-medium: #8C8D91;
   --neutral-color-dark: #49494F;
   --success-color: #338473;
@@ -79,7 +79,7 @@ body {
 
   .widget {
     grid-area: widget;
-    background-color: #e8eaf6; /* light purple */
+    background-color: var(--neutral-color); 
     padding: 10px;
     width: 100%;
   }

@@ -49,7 +49,7 @@ function Card({
         <div className="title">
           <div className="author-company">
             <span className="author">{author} |</span>
-            <span className="company-name"> {companyName}</span>
+            <span className="company-name">{companyName}</span>
           </div>
           <h2>{title}</h2>
         </div>
