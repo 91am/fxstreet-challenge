@@ -121,10 +121,29 @@
       }
     }
 
+     .save-btn {
+      color: var(--neutral-color-dark);
+      path {
+        stroke: var(--neutral-color-dark);
+        stroke-width: 2;
+        fill: transparent;
+      }
+      &.saved {
+        path {
+          transition: all 1s ease-in-out;
+          fill: var(--success-color);
+          stroke: var(--success-color);
+        }
+        span {
+          color: var(--success-color);
+        }
+      }
+    }
+
     .save-btn:hover {
       path {
         transition: fill 0.3s ease;
-        fill: var(--success-color);
+        stroke: var(--success-color);
       }
       span {
         color: var(--success-color);
