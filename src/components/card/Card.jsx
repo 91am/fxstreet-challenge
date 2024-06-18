@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Card.css";
 import Dropdown from "../dropdown-menu/DropdownMenu";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 
 function Card({
@@ -14,6 +15,7 @@ function Card({
   content,
 }) {
 
+  const isMobile = useMediaQuery("only screen and (max-width: 1080px)");
   const [like, setLike]=useState(false)
   const [save, setSave]=useState(false)
 
@@ -36,10 +38,15 @@ function Card({
     <div className="card">
       <section className="category">
         <div className="sub-category">
-          <img src="/search-icon.svg" alt="" />
-          <span className="feed">{feed}</span>
-          <img src="/arrow-icon.svg" alt="" />
-          <span className="sub-feed">{subFeed}</span>
+          <div className="sub-category-feed">
+            <img src="/search-icon.svg" alt="" />
+            <span className="feed">{feed}</span>
+          </div>
+
+          <div className="sub-category-sub-feed">
+            {!isMobile && <img src="/arrow-icon.svg" alt="" />}
+            <span className="sub-feed">{subFeed}</span>
+          </div>
         </div>
 
         <div className="date">
