@@ -1,10 +1,9 @@
 import { useState } from "react";
-import "./Card.css";
+import "./PostCard.css";
 import Dropdown from "../dropdown-menu/DropdownMenu";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
-
-function Card({
+function PostCard({
   title,
   feed,
   subFeed,
@@ -14,10 +13,9 @@ function Card({
   publicationTime,
   content,
 }) {
-
   const isMobile = useMediaQuery("only screen and (max-width: 1080px)");
-  const [like, setLike]=useState(false)
-  const [save, setSave]=useState(false)
+  const [like, setLike] = useState(false);
+  const [save, setSave] = useState(false);
 
   const dateStr = publicationTime;
   const date = new Date(dateStr);
@@ -115,4 +113,4 @@ function Card({
   );
 }
 
-export default Card;
+export default PostCard;

@@ -54,6 +54,7 @@
   .dropdown-menu-option {
     display: flex;
     border: none;
+    width: 100%;
     gap: 8px;
     align-items: center;
     background-color: unset;
