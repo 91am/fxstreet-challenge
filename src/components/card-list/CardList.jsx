@@ -7,7 +7,7 @@ import "./CardList.css"
 
 
 export default function CardList() {
-    const {data,isLoading} = useQuery({queryKey:"post",queryFn:getPosts})
+    const {data,isLoading} = useQuery({queryKey:["post"],queryFn:getPosts})
     const [searchParams] = useSearchParams()
 
     const filter = searchParams.get("filter")
