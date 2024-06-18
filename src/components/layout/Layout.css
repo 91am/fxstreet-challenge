@@ -1,0 +1,62 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    "sidebar topbar topbar"
+    "sidebar filter widget"
+    "sidebar main widget";
+  grid-template-columns: 255px 3fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  @media screen and (max-width: 1080px) {
+    grid-template-areas:
+      "sidebar sidebar sidebar"
+      "filter filter filter"
+      "main main main"
+      "widget widget widget";
+
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .topbar {
+    grid-area: topbar;
+    padding: 10px;
+    height: 40px;
+      @media screen and (max-width: 1080px) {
+        display: none;
+      }
+  }
+
+  .filter {
+    grid-area: filter;
+    background-color: var(--neutral-color);
+    padding: 10px;
+  }
+
+  .main {
+    grid-area: main;
+    background-color: var(--neutral-color);
+    height: 100%;
+    overflow-y: scroll;
+
+    .content {
+      height: 100vh;
+      align-items: center;
+      padding: 8px 20px;
+    }
+  }
+
+  .widget {
+    grid-area: widget;
+    background-color: var(--neutral-color); 
+    padding: 10px;
+    width: 100%;
+  }
+}
