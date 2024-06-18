@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 
 import { useClickAway } from "@uidotdev/usehooks";
 
-function DropdownMenu(){
+function DropdownMenu() {
   const [open, setOpen] = useState(false);
-  const [step, setStep] = useState(0); 
+  const [step, setStep] = useState("options");
 
   const ref = useClickAway(() => {
     setOpen(false);
-    setStep(0);
+    setStep("options");
   });
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         setOpen(false);
-        setStep(0);
+        setStep("options");
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -28,13 +28,7 @@ function DropdownMenu(){
 
   const handleTriggerClick = () => {
     setOpen(!open);
-    setStep(0);
-  };
-
-  const handleOptionClick = (option) => {
-    if (option === "option1") {
-      setStep(1);
-    }
+    setStep("options");
   };
 
   return (
@@ -44,27 +38,32 @@ function DropdownMenu(){
       </button>
       {open && (
         <div className="dropdown-menu-content" ref={ref}>
-          {step === 0 && (
+          {step === "options" && (
             <div>
               <button
                 className="dropdown-menu-option"
-                onClick={() => handleOptionClick("option1")}
+                onClick={() => {
+                  setStep("hide-options");
+                }}
               >
                 {" "}
                 <img src="/hide-icon.svg" alt="" />
                 Hide
               </button>
-              <button
-                className="dropdown-menu-option"
-              >
+              <button className="dropdown-menu-option">
                 <img src="/improve-icon.svg" alt="" />
                 Improve my feed
               </button>
             </div>
           )}
-          {step === 1 && (
+          {step === "hide-options" && (
             <div className="user-options-container">
-              <button className="user-options-title">
+              <button
+                className="user-options-title"
+                onClick={() => {
+                  setStep("options");
+                }}
+              >
                 <img src="/arrow_back.svg" alt="" />
                 <span>Tell us why:</span>
               </button>
@@ -100,6 +99,6 @@ function DropdownMenu(){
       )}
     </div>
   );
-};
+}
 
 export default DropdownMenu;
