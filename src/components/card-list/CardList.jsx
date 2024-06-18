@@ -48,7 +48,7 @@ export default function CardList() {
           {data
             ?.sort(
               (a, b) =>
-                new Date(a.publicationTime) - new Date(b.publicationTime)
+                new Date(b.publicationTime) - new Date(a.publicationTime)
             )
             .map((post) => (
               <Card
