@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     font: var(--heading-m-font);
-    gap: 4px;
+    gap: 8px;
 
     .feed {
       color: var(--secondary-color);
@@ -56,6 +56,10 @@
       flex-direction: row;
       font: var(--heading-s-font);
       color: var(--neutral-color-medium);
+
+      .separator{
+        padding: 0 8px;
+      }
     }
 
     h2 {
@@ -90,16 +94,15 @@
     font: var(--body-m-font);
     gap: 60px;
 
-    button {
+
+
+    .like-btn {
       display: flex;
       border: none;
       gap: 8px;
       align-items: center;
       background-color: unset;
       cursor: pointer;
-    }
-
-    .like-btn {
       color: var(--neutral-color-dark);
       path {
         stroke: var(--neutral-color-dark);
@@ -129,6 +132,12 @@
     }
 
      .save-btn {
+      display: flex;
+      border: none;
+      gap: 8px;
+      align-items: center;
+      background-color: unset;
+      cursor: pointer;
       color: var(--neutral-color-dark);
       path {
         stroke: var(--neutral-color-dark);

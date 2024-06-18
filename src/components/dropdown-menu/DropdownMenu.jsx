@@ -39,21 +39,23 @@ function DropdownMenu(){
 
   return (
     <div className="dropdown-menu-container">
-      <button onClick={handleTriggerClick}>  
-          <img src="/dots-dropdown-icon.svg" alt="" />
+      <button className="dropdown-menu-trigger" onClick={handleTriggerClick}>
+        <img src="/dots-dropdown-icon.svg" alt="" />
       </button>
       {open && (
         <div className="dropdown-menu-content" ref={ref}>
           {step === 0 && (
             <div>
-              <button className="dropdown-menu-option">
+              <button
+                className="dropdown-menu-option"
+                onClick={() => handleOptionClick("option1")}
+              >
                 {" "}
                 <img src="/hide-icon.svg" alt="" />
                 Hide
               </button>
               <button
                 className="dropdown-menu-option"
-                onClick={() => handleOptionClick("option1")}
               >
                 <img src="/improve-icon.svg" alt="" />
                 Improve my feed

@@ -52,7 +52,8 @@ function Card({
         <img src={authorImage} alt="Author" />
         <div className="title">
           <div className="author-company">
-            <span className="author">{author} |</span>
+            <span className="author">{author}</span>
+            <span className="separator">|</span>
             <span className="company-name">{companyName}</span>
           </div>
           <h2>{title}</h2>
@@ -83,11 +84,11 @@ function Card({
           <span>{like ? "Liked!" : "Like"}</span>
         </button>
 
-        <button 
-        className={`save-btn ${save ? "saved" : "unsaved"}`}
-        onClick={() => {
-          setSave(!save)
-        }}
+        <button
+          className={`save-btn ${save ? "saved" : "unsaved"}`}
+          onClick={() => {
+            setSave(!save);
+          }}
         >
           <svg
             width="14"
@@ -100,7 +101,7 @@ function Card({
           </svg>
           <span>{save ? "Saved!" : "Save"}</span>
         </button>
-        
+
         <Dropdown></Dropdown>
       </section>
     </div>
