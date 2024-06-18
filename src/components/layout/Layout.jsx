@@ -8,22 +8,22 @@ import React from "react";
 
 export default function Layout({ children }) {
   return (
-    <div class="layout">
-      <div class="sidebar">
+    <div className="layout">
+      <div className="sidebar">
         <Sidebar></Sidebar>
       </div>
-      <div class="topbar">
+      <div className="topbar">
         <Topbar></Topbar>
       </div>
-      <div class="filter">
+      <div className="filter">
         <Filter></Filter>
       </div>
-      <main class="main">
-        <div class="content">
+      <main className="main">
+        <div className="content">
           {children}
         </div>
       </main>
-      <div class="widget">
+      <div className="widget">
         <WidgetCard></WidgetCard>
       </div>
     </div>

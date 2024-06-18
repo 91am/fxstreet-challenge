@@ -2,12 +2,23 @@ import {useQuery} from "@tanstack/react-query"
 import Card from "../card/Card"
 import { getPosts } from "../../api"
 import { useSearchParams } from "react-router-dom"
+import Spinner from "../spinner/Spinner"
+import "./CardList.css"
+
 
 export default function CardList() {
-    const {data,isLoading,isError} = useQuery({queryKey:"post",queryFn:getPosts})
+    const {data,isLoading} = useQuery({queryKey:"post",queryFn:getPosts})
     const [searchParams] = useSearchParams()
 
     const filter = searchParams.get("filter")
+
+    if(isLoading) {
+      return (
+        <div className="card-list-spinner">
+          <Spinner></Spinner>
+        </div>
+      );
+    }
 
     if(filter === "popular") {
       return (
