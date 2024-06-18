@@ -1,11 +1,25 @@
 import "./Filter.css"
+import { useSearchParams } from "react-router-dom";
 
 export default function Filter() {
+
+  const [searchParams, setSearchParams] = useSearchParams()
+
   return (
     <div className="filter">
+
       <section className="filter-navigation">
-        <button className="filter-lastest">Lastest</button>
-        <button className="filter-popular">Popular</button>
+        <button className={`filter-latest ${searchParams.get("filter") === "latest" ? "active" : ""}` }
+        onClick={()=>{
+          setSearchParams({filter:"latest"})
+        }}
+        >Lastest</button>
+
+        <button className={`filter-popular ${searchParams.get("filter") === "popular" ? "active" : ""}`}
+        onClick={()=>{
+          setSearchParams({filter:"popular"})
+        }}
+        >Popular</button>
       </section>
 
       <section className="filter-menu">

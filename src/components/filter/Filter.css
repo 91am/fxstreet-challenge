@@ -12,12 +12,16 @@
     flex-direction: row;
     gap: 16px;
 
-    .filter-lastest {
+    .filter-latest {
       color: var(--neutral-color-dark);
       border: none;
       font: var(--heading-m-font);
       background-color: unset;
       cursor: pointer;
+
+      &.active {
+        color: var(--accent-color);
+      }
     }
 
     .filter-popular {
@@ -26,6 +30,10 @@
       font: var(--heading-m-font);
       background-color: unset;
       cursor: pointer;
+
+      &.active {
+        color: var(--accent-color);
+      }
     }
   }
 
