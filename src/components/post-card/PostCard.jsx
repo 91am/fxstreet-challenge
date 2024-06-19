@@ -53,17 +53,32 @@ function PostCard({
         </div>
       </section>
 
-      <section className="head">
-        <img src={authorImage} alt="Author" />
-        <div className="title">
-          <div className="author-company">
+      {isMobile ? (
+        <section className="head-mobile">
+          <div className="author-company-mobile">
             <span className="author">{author}</span>
             <span className="separator">|</span>
             <span className="company-name">{companyName}</span>
           </div>
-          <h2>{title}</h2>
-        </div>
-      </section>
+
+          <div className="title-mobile">
+            <img src={authorImage} alt="Author" />
+            <h2>{title}</h2>
+          </div>
+        </section>
+      ) : (
+        <section className="head">
+          <img src={authorImage} alt="Author" />
+          <div className="title">
+            <div className="author-company">
+              <span className="author">{author}</span>
+              <span className="separator">|</span>
+              <span className="company-name">{companyName}</span>
+            </div>
+            <h2>{title}</h2>
+          </div>
+        </section>
+      )}
 
       <p
         className="content-card"

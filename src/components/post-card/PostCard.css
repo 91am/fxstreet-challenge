@@ -31,6 +31,7 @@
       flex-direction: column;
       align-items: start;
       font: var(--heading-s-font); 
+      width: 160px;
   }
 
     .sub-category-feed{
@@ -64,6 +65,37 @@
          @media screen and (max-width: 1080px) {
      font: var(--body-xs-font);
   }
+  }
+
+  .author-company-mobile{
+    display: flex;
+      flex-direction: row;
+      font: var(--heading-s-font);
+      color: var(--neutral-color-medium);
+      padding: 12px 20px;
+
+      .separator{
+        padding: 0 8px;
+      }
+  }
+
+  .title-mobile{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid var(--neutral-color);
+    padding: 4px 20px 12px 20px;
+    gap: 12px;
+
+    img{
+       clip-path: circle(50%);
+      width: 60px;
+      height: 60px;
+    }
+
+    h2{
+      font: var(--heading-l-font);
+      color: var(--neutral-color-dark);
+    }
   }
 
   .head {
@@ -123,16 +155,16 @@
     font: var(--body-m-font);
     gap: 60px;
 
-
-
     .like-btn {
       display: flex;
       border: none;
+      width: 50px;
       gap: 8px;
       align-items: center;
       background-color: unset;
       cursor: pointer;
       color: var(--neutral-color-dark);
+
       path {
         stroke: var(--neutral-color-dark);
         stroke-width: 2;
@@ -163,6 +195,7 @@
      .save-btn {
       display: flex;
       border: none;
+      width: 50px;
       gap: 8px;
       align-items: center;
       background-color: unset;
