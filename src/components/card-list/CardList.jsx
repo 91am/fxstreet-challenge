@@ -24,7 +24,7 @@ export default function CardList() {
 
   if (filter === "popular") {
     return (
-      <div>
+      <div className="card-list-container">
         {data
           ?.filter((post) => post.isPopular === true)
           .map((post) => (
@@ -46,7 +46,7 @@ export default function CardList() {
 
   if (filter === "latest") {
     return (
-      <div>
+      <div className="card-list-container">
         {data
           ?.sort(
             (a, b) => new Date(b.publicationTime) - new Date(a.publicationTime)
@@ -69,7 +69,7 @@ export default function CardList() {
   }
 
   return (
-    <div>
+    <div className="card-list-container">
       {data?.map((post) => (
         <PostCard
           key={post.id}
