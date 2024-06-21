@@ -12,23 +12,23 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <div className="sidebar">
-        <Sidebar></Sidebar>
+        <Sidebar/>
       </div>
       <div className="topbar">
-        <Topbar></Topbar>
+        <Topbar/>
       </div>
       <div className="filter">
-        <Filter></Filter>
+        <Filter/>
       </div>
       <main className="main">
         <div className="content">
           {children}
-          {isMobile && <WidgetCard></WidgetCard>}
+          {isMobile && <WidgetCard/>}
         </div>
       </main>
       {!isMobile && (
         <div className="widget">
-          <WidgetCard></WidgetCard>
+          <WidgetCard/>
         </div>
       )}
     </div>

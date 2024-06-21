@@ -122,7 +122,7 @@ function PostCard({
           <span>{save ? "Saved!" : "Save"}</span>
         </button>
 
-        <Dropdown></Dropdown>
+        <Dropdown/>
       </section>
     </div>
   );

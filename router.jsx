@@ -11,7 +11,7 @@ export default function Router() {
           path="/"
           element={
             <Layout>
-              <CardList></CardList>
+              <CardList/>
             </Layout>
           }
         />

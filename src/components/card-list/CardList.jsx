@@ -17,7 +17,7 @@ export default function CardList() {
   if (isLoading) {
     return (
       <div className="card-list-spinner">
-        <Spinner></Spinner>
+        <Spinner/>
       </div>
     );
   }
