@@ -4,9 +4,10 @@
   --tertiary-color: #7598c4;
   --accent-color: #e4871b;
   --neutral-color: #ececf1;
-  --neutral-color-light: #ffffff;
-  --neutral-color-medium: #8C8D91;
-  --neutral-color-dark: #49494F;
+  --neutral-color-lightest: #ffffff;
+  --neutral-color-light: #DDDEDF;
+  --neutral-color-medium: #8c8d91;
+  --neutral-color-dark: #49494f;
   --success-color: #338473;
   --error-color: #d25746;
   --heading-l-font: 700 22.4px "Roboto", sans-serif;
@@ -21,4 +22,3 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-

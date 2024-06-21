@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--neutral-color-light);
+  background-color: var(--neutral-color-lightest);
 
   .topbar-navigation {
     display: flex;

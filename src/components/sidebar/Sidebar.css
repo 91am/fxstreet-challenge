@@ -42,7 +42,7 @@
 
     .side-menu {
       list-style: none;
-      color: var(--neutral-color-light);
+      color: var(--neutral-color-lightest);
 
       .link-menu {
         padding: 8px 0;
