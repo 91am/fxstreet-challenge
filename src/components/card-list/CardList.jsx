@@ -17,60 +17,27 @@ export default function CardList() {
   if (isLoading) {
     return (
       <div className="card-list-spinner">
-        <Spinner/>
+        <Spinner />
       </div>
     );
   }
 
-  if (filter === "popular") {
-    return (
-      <div className="card-list-container">
-        {data
-          ?.filter((post) => post.isPopular === true)
-          .map((post) => (
-            <PostCard
-              key={post.id}
-              title={post.title}
-              feed={post.feed}
-              subFeed={post.subFeed}
-              author={post.author.name}
-              companyName={post.author.companyName}
-              authorImage={post.author.imageUrl}
-              publicationTime={post.publicationTime}
-              content={post.content}
-            ></PostCard>
-          ))}
-      </div>
-    );
-  }
+  const filteredData = data?.filter((post) => {
+    if (filter === "popular") return post.isPopular;
+    if (filter === "latest") return true;
+    return true;
+  });
 
-  if (filter === "latest") {
-    return (
-      <div className="card-list-container">
-        {data
-          ?.sort(
-            (a, b) => new Date(b.publicationTime) - new Date(a.publicationTime)
-          )
-          .map((post) => (
-            <PostCard
-              key={post.id}
-              title={post.title}
-              feed={post.feed}
-              subFeed={post.subFeed}
-              author={post.author.name}
-              companyName={post.author.companyName}
-              authorImage={post.author.imageUrl}
-              publicationTime={post.publicationTime}
-              content={post.content}
-            ></PostCard>
-          ))}
-      </div>
-    );
-  }
+  const sortedData =
+    filter === "latest"
+      ? filteredData.sort(
+          (a, b) => new Date(b.publicationTime) - new Date(a.publicationTime)
+        )
+      : filteredData;
 
   return (
-    <div className="card-list-container">
-      {data?.map((post) => (
+    <div>
+      {sortedData.map((post) => (
         <PostCard
           key={post.id}
           title={post.title}
@@ -81,7 +48,7 @@ export default function CardList() {
           authorImage={post.author.imageUrl}
           publicationTime={post.publicationTime}
           content={post.content}
-        ></PostCard>
+        />
       ))}
     </div>
   );
